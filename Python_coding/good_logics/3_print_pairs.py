@@ -7,3 +7,5 @@ def func_quad(lst):
             
 lst = [1, 2, 3, 4, 5]
 func_quad(lst)
+
+# note that in the case where the list has 3 elements for example, the number of outputs will be n*n
