@@ -59,7 +59,7 @@ def delete_drink(id):
     drink = Drink.query.get_or_404(id)
     db.session.delete(drink)
     db.session.commit()
-    return {'deleted': True}
+    return {'message': 'The item has been deleted'}
 
 if __name__ == '__main__':
     app.run(debug=True)
