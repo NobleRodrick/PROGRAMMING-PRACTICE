@@ -53,5 +53,13 @@ def add_drink():
 
     return {'id': new_drink.id}, 201
 
+
+@app.route('/drinks/<id>', methods=['DELETE'])
+def delete_drink(id):
+    drink = Drink.query.get_or_404(id)
+    db.session.delete(drink)
+    db.session.commit()
+    return {'deleted': True}
+
 if __name__ == '__main__':
     app.run(debug=True)
